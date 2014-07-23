@@ -1,13 +1,12 @@
 {
   "name": "aws-sqs-eventqueue",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An array-like interface to publish a JSON message to an AWS SQS Queue",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "REGION=us-east-1 node tasks/bootstrap",
     "test": "REGION=us-east-1 node test/** | tap-spec",
     "repl": "REGION=us-east-1 node tasks/repl"
   },
@@ -19,5 +18,5 @@
   "dependencies": {
     "aws-sdk": "^2.0.8"
   },
-  "license":"Apache2"
+  "license": "Apache2"
 }
