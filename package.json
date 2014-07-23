@@ -1,0 +1,22 @@
+{
+  "name": "eventqueue",
+  "version": "0.1.0",
+  "description": "An array like abstraction of an Amazon SQS Queue. An EventQueue equals one system event.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "REGION=us-east-1 node test/before && node test/test-* | tap-spec && node test/after",
+    "repl": "REGION=us-east-1 node tasks/repl"
+  },
+  "author": "Brian LeRoux <b@brian.io>",
+  "devDependencies": {
+    "tap-spec": "^0.2.0",
+    "tape": "^2.13.4"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.0.8"
+  },
+  "license":"Apache2"
+}
