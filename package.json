@@ -1,5 +1,5 @@
 {
-  "name": "aws-sqs-event",
+  "name": "aws-sqs-eventqueue",
   "version": "0.1.0",
   "description": "An array-like interface to publish a JSON message to an AWS SQS Queue",
   "main": "index.js",
@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "REGION=us-east-1 node test/before && node test/test-* | tap-spec && node test/after",
+    "test": "REGION=us-east-1 node tasks/bootstrap",
+    "test": "REGION=us-east-1 node test/** | tap-spec",
     "repl": "REGION=us-east-1 node tasks/repl"
   },
   "author": "Brian LeRoux <b@brian.io>",
