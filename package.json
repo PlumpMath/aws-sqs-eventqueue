@@ -1,7 +1,7 @@
 {
-  "name": "eventqueue",
+  "name": "aws-sqs-event",
   "version": "0.1.0",
-  "description": "An array like abstraction of an Amazon SQS Queue. An EventQueue equals one system event.",
+  "description": "An array-like interface to publish a JSON message to an AWS SQS Queue",
   "main": "index.js",
   "directories": {
     "test": "test"
