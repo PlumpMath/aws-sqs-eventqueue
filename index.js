@@ -36,7 +36,7 @@ EventQueue.prototype.push = function push(message, cb) {
 EventQueue.prototype.pop = function pop(cb) {
     _getUrl(this.name, function(err, url) {        
         sqs.receiveMessage({QueueUrl:url, AttributeNames:['All']}, function (err, data) {
-            if (data.Messages && data.Messages.length > 0) {
+            if (data && data.Messages && data.Messages.length > 0) {
                 var message = data.Messages[0]
                   , body = JSON.parse(message.Body)
                   , handle = message.ReceiptHandle
